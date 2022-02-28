@@ -5,16 +5,18 @@ public class Time {
     private String nomeTime;
     private String nomeCid;
     private String nomeEst;
+    private String[] titulos;
 
     public Time(){
 
     }
 
-    public Time(int logoTime, String nomeTime, String nomeCid, String nomeEst) {
+    public Time(int logoTime, String nomeTime, String nomeCid, String nomeEst, String[] titulos) {
         this.logoTime = logoTime;
         this.nomeTime = nomeTime;
         this.nomeCid = nomeCid;
         this.nomeEst = nomeEst;
+        this.titulos= titulos;
     }
 
     public int getLogoTime() {
@@ -48,4 +50,10 @@ public class Time {
     public void setNomeEst(String nomeEst) {
         this.nomeEst = nomeEst;
     }
+
+    public String[] getTitulos() {
+        return titulos;
+    }
+
+    public void setTitulos(String[] titulos) { this.titulos = titulos; }
 }
