@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.listacustom.DetailsActivity;
 import com.example.listacustom.R;
@@ -128,5 +129,11 @@ public class MainActivity extends AppCompatActivity {
         params.putString("city", time.getNomeCid());
         params.putString("state", time.getNomeEst());
         params.putStringArray("titles", time.getTitulos());
+
+        System.out.println("cidade: "+time.getNomeCid());
+        System.out.println("estado: "+time.getNomeEst());
+        System.out.println("titulos"+time.getTitulos());
+        it.putExtras(params);
+        startActivity(it);
     }
 }
